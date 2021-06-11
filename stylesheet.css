@@ -1,0 +1,250 @@
+@import url("http://fonts.cdnfonts.com/css/netflix-sans");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Netflix sans", sans-serif;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION BAR STYLES */
+
+.nav-bar {
+  height: 6.8vh;
+  min-height: 40px;
+  /* width: 94vw; */
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 255));
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw 0 3vw;
+  position: relative;
+  z-index: 99;
+}
+
+.nav-bar__right,
+.nav-bar__left {
+  display: flex;
+  height: 100%;
+  color: #e5e5e5;
+  font-size: 0.9em;
+  justify-content: space-around;
+}
+
+.nav-bar__section {
+  display: inline-block;
+  justify-content: center;
+  align-self: center;
+  white-space: nowrap;
+  margin: 0 0 0 1.6em;
+}
+
+.logo-container {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.child__section {
+  cursor: pointer;
+}
+
+.categories-menu__item {
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+.categories-menu__links {
+  color: #ffffffe5;
+  margin: 0 0 0 0.4em;
+  text-decoration: none;
+}
+
+.nav-bar__img-profile {
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.logo-netflix {
+  cursor: pointer;
+  justify-self: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.icon-bell,
+.icon-search {
+  cursor: pointer;
+  font-size: 1.4em;
+}
+
+/* HEADER (FIRST IMPRESSION) */
+/* Z INDEXES
+
+99 - NavBar
+
+
+*/
+
+.movie__trailer {
+  position: relative;
+  top: -6.8vh;
+  left: 0;
+}
+
+.movie__trailer-video {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.movie__trailer-information {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.movie-trailer-name__container {
+  margin-top: 10vw;
+}
+
+.movie__trailer-name {
+  width: 100%;
+}
+
+.movie__trailer-cover {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.movie__trailer-text {
+  top: 0;
+  padding: 0 3vw;
+  padding-top: 6%;
+  width: 30%;
+  font-size: 1.4vw;
+  color: #fff;
+  word-spacing: -0.45em;
+  z-index: 4;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.movie__trailer-buttonpanel {
+  display: flex;
+  margin-top: 1.2vw;
+}
+
+.movie__trailer-playbtn,
+.movie__trailer-infobtn {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-style: none;
+
+  padding: 0.55vw 1.5vw;
+  border-radius: 0.2em;
+  font-size: 0.9em;
+  font-weight: bold;
+  -webkit-font-smoothing: antialised;
+}
+
+.movie__trailer-playbtn {
+  color: black;
+  background-color: white;
+  margin-right: 0.6vw;
+}
+.movie__trailer-infobtn {
+  color: white;
+  background-color: rgb(59, 59, 59);
+}
+
+.icon-play,
+.icon-information {
+  font-weight: normal;
+  font-size: 1.3em;
+  margin-right: 0.6em;
+}
+
+/* -------------------------------------------------------- */
+/* MOVIES SECTION*/
+
+.main__body {
+  padding: 0 3vw;
+}
+.movie__container-list {
+  display: flex;
+  list-style-type: none;
+}
+
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+
+/* CLASSES FOR JAVASCRIPT DINAMICS */
+
+.trailer__playing-title {
+  animation: trailer__playing-title 1.3s 4s ease-in-out both;
+}
+
+.trailer__playing-description {
+  animation: trailer__playing-description 0.5s 4s ease-in-out both;
+}
+
+.trailer__playing-cover {
+  animation: trailer__playing-cover 0.5s ease-in-out both;
+}
+
+/* CLASSES FOR DINAMIC ELEMENTS */
+
+.category-selected {
+  color: white;
+  font-weight: 600;
+}
+
+/* EVENTS CSS  */
+
+.categories-menu__links:hover {
+  animation: darker-font_onHover 0.4s ease-in-out both;
+}
+
+.movie__trailer-playbtn:hover,
+.movie__trailer-infobtn:hover {
+  opacity: 0.7;
+}
+
+/* ANIMATIONS CSS */
+@keyframes darker-font_onHover {
+  100% {
+    color: #b3b3b3;
+  }
+}
+
+@keyframes trailer__playing-title {
+  100% {
+    transform-origin: left bottom;
+    transform: scale(0.9) translate(0, 7vw);
+  }
+}
+
+@keyframes trailer__playing-cover {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes trailer__playing-description {
+  100% {
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: translateY(2vw);
+  }
+}

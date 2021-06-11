@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://css.gg/search.css' rel='stylesheet'>
+    <link href='https://css.gg/bell.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./logo-netflix.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="./icons-navbar.css">
+    <link rel="stylesheet" href="./icons-trailer.css">
+    <title>Netflix a mi estilo by JK</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-bar__left">
+                <div class="nav-bar__section logo-container">
+                    <a href="#" class="logo-netflix"></a>
+                </div>
+                <div class="nav-bar__section" id="categories-menu">
+                    <div class="categories-menu__item category-selected">
+                        <a class="categories-menu__links" href="#">Inicio</a>
+                    </div>
+                    <div class="categories-menu__item"><a class="categories-menu__links" href="#">Series</a></div>
+                    <div class="categories-menu__item"><a class="categories-menu__links" href="#">Peliculas</a></div>
+                    <div class="categories-menu__item"><a class="categories-menu__links" href="#">Novedades populares</a> </div>
+                    <div class="categories-menu__item"> <a class="categories-menu__links" href="#">Mi lista</a></div>
+                </div>
+        </div>
+        <div class="nav-bar__right">
+            <div class="nav-bar__section">
+                <a class="icon-search"></a>
+            </div>
+            <div class="nav-bar__section"><a class="categories-menu__links" href="#">NIÑOS</a></div>
+            <div class="nav-bar__section">
+                <a class="icon-bell"></a>
+            </div>
+            <div class="nav-bar__section">
+                <img class="nav-bar__img-profile" src="assets/icons/logo-profile.png" alt="">
+            </div>
+        </div>
+    </nav>
+    <header class="movie__trailer">
+        <img class="movie__trailer-cover" src="./assets/imgs/header2.webp" alt="">
+        <video class="movie__trailer-video" id="trailer-reproduction" muted>
+            <source  src="./assets/videos/ragnarok-trailer.mp4" type="video/mp4">
+        </video>
+        <div class="movie__trailer-information">
+            <div class="movie__trailer-text">
+                <div class="movie-trailer-name__container">
+                    <img class="movie__trailer-name" src="./assets/imgs/name.webp" alt="ragnarok name">
+                </div>
+            <p class="movie__trailer-description">
+                El fin del mundo se respira en cada rincón de un pueblo noruego golpeado por la contaminación y el deshielo de glaciares. Solo una leyenda podrá combatir un viejo mal.
+            </p>
+            <div class="movie__trailer-buttonpanel">
+                <button  type="button" class="movie__trailer-playbtn" onclick="saludo()"> 
+                        <span class="icon-play"></span> Reproducir
+                    </button>
+                <button  class="movie__trailer-infobtn" onclick=saludo()> 
+                    <span class="icon-information"></span> Más información
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main__body">
+        <div class="movie__container">
+            <ul class="movie__container-list">
+                <li class="movie__container-item">d</li>
+                <li class="movie__container-item">f</li>
+                <li class="movie__container-item">g</li>
+                <li class="movie__container-item">v</li>
+                <li class="movie__container-item">x</li>
+                <li class="movie__container-item">f</li>
+                <li class="movie__container-item">f</li>
+                <li class="movie__container-item">f</li>
+                <li class="movie__container-item">f</li>
+            </ul>
+        </div>
+        <div class="movie__container"></div>
+        <div class="movie__container"></div>
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>

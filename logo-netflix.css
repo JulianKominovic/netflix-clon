@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "netflix-logo";
+  src: url("./assets/fonts/netflix-logo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.logo-netflix:before {
+  font-family: "netflix-logo" !important;
+  content: "\e900";
+  color: #ec2223;
+}

@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "icons-trailer";
+  src: url("./assets/fonts/icons-trailer.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon-information:before {
+  font-family: "icons-trailer", sans-serif;
+  content: "\e900";
+}
+.icon-play:before {
+  font-family: "icons-trailer", sans-serif;
+  content: "\ea1c";
+}
