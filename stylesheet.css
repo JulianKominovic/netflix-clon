@@ -61,6 +61,7 @@ body {
   color: #ffffffe5;
   margin: 0 0 0 0.4em;
   text-decoration: none;
+  transition: all 0.5s;
 }
 
 .nav-bar__img-profile {
@@ -254,7 +255,8 @@ body {
 /* EVENTS CSS  */
 
 .categories-menu__links:hover {
-  animation: darker-font_onHover 0.4s ease-in-out both;
+  color: #b3b3b3;
+  transition: 0.5s;
 }
 
 .movie__trailer-playbtn:hover,
@@ -263,11 +265,6 @@ body {
 }
 
 /* ANIMATIONS CSS */
-@keyframes darker-font_onHover {
-  100% {
-    color: #b3b3b3;
-  }
-}
 
 @keyframes trailer__playing-title {
   100% {
