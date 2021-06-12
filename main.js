@@ -1,4 +1,5 @@
 
+const navBar = document.querySelector('.nav-bar');
 const trailerVideo = document.getElementById("trailer-reproduction");
 const trailerName = document.querySelector(".movie-trailer-name__container");
 const trailerDescription = document.querySelector(".movie__trailer-description");
@@ -13,8 +14,8 @@ const adjustTrailerInfo = ()=>{
 }
 
 const initTrailerPlayer = (e)=>{
-    trailerVideo.play();
-    adjustTrailerInfo();
+    setTimeout(()=>{trailerVideo.play()
+        adjustTrailerInfo()}, 4000);
 }
 
 const stopTrailerPlayer = ()=>{
@@ -27,13 +28,19 @@ const stopTrailerPlayer = ()=>{
 
 }
 
+const adjustNavBar = ()=>{
+
+    if(window.scrollY!=0){
+        navBar.setAttribute("style", "background-color: rgb(20,20,20)");
+    } else{
+        navBar.setAttribute("style", "background:linear-gradient(0deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 255))");
+    } 
+
+}
+
 // EVENTS
-
-trailerVideo.addEventListener('loadeddata',(e)=>{
-    setTimeout(()=>initTrailerPlayer(e), 4000);
-});
-
-
+window.addEventListener('scroll', ()=>adjustNavBar());
+trailerVideo.addEventListener('loadeddata',()=>initTrailerPlayer());
 trailerVideo.addEventListener('mouseover',()=>initTrailerPlayer());
 movieCatalogue.addEventListener('mouseover',()=>stopTrailerPlayer());
 

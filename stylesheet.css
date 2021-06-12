@@ -13,12 +13,13 @@ body {
 .nav-bar {
   height: 6.8vh;
   min-height: 40px;
-  /* width: 94vw; */
+  width: 94vw;
   background: linear-gradient(0deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 255));
   display: flex;
   justify-content: space-between;
-  padding: 0 5vw 0 3vw;
-  position: relative;
+  padding-left: 3vw;
+  padding-right: 9vw;
+  position: fixed;
   z-index: 99;
 }
 
