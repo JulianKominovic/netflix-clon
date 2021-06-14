@@ -218,7 +218,7 @@ body {
 
 .movie__container-item-clickeable {
   display: block;
-  width: 16vw;
+  width: 15vw;
 }
 
 .movie__container-item-cover {
@@ -242,7 +242,7 @@ body {
 .trailer__playing-title {
   transition: 2s;
   transform-origin: left bottom;
-  transform: scale(0.9) translate(0, 8vw);
+  transform: scale(0.9) translate(0, 10vw);
   transition-delay: 4s;
 }
 
