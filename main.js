@@ -102,10 +102,12 @@ const BuildHtmlCatalogue = (element)=>{
         if(isInside(frag.id, element.movie_genre) >= 1){
             console.log(frag);
             console.log(element.movie_title);
+            //images a little bit more random
+            let newSize = `https://picsum.photos/${Math.round(Math.random() * (500 - 180)+180)}/${Math.round(Math.random() * (500 - 180)+180)}`;
             newELement.innerHTML = `
                         <a href="" class="movie__container-item-clickeable">
                             <div class="movie__container-item-cover">
-                                <img class="movie__container-item-img" src="${element.movie_cover}" alt="${element.movie_title}">
+                                <img class="movie__container-item-img" src="${newSize}" alt="${element.movie_title}">
                             </div>
                         </a>
     `;
@@ -113,6 +115,7 @@ const BuildHtmlCatalogue = (element)=>{
         }
     });
 }
+
     
 const requestMovies = (moviesRequested)=>{
     return new Promise((resolve, reject)=>{
